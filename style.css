@@ -1,10 +1,12 @@
 /*!
 Theme Name: Xry
+GitHub Theme URI: jahur/xry
+GitHub Theme URI: https://github.com/jahur/xry
 Theme URI: https://thetechydots.com/
 Author: The Techy Dots
 Author URI: https://thetechydots.com/
 Description: A modern elegant WordPress theme
-Version: 1.0.0
+Version: 1.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -756,7 +758,7 @@ textarea {
 
 .main-navigation li {
 	position: relative;
-    line-height: 80px;
+    line-height: 55px;
 }
 
 .main-navigation a {

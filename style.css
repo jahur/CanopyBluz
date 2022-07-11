@@ -1,6 +1,6 @@
 /*!
 Theme Name: Xry
-Theme URI: http://underscores.me/
+Theme URI: https://thetechydots.com/
 Author: The Techy Dots
 Author URI: https://thetechydots.com/
 Description: A modern elegant WordPress theme
@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -239,6 +239,10 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+    background-color: #4827e7;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #4827e7;
 }
 
 /**
@@ -484,7 +488,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0px;
+    padding: 0px;
 }
 
 ul {
@@ -645,11 +650,65 @@ textarea {
 # Components
 --------------------------------------------------------------*/
 
+/* Header
+---------------------------------------------- */
+.site-branding {
+    float: left;
+    height: 100%;
+    display: table;
+}
+#site-navigation-wrapper {
+    float: right;
+    position: relative;
+    right: -15px;
+}
+.site-header {
+    min-height: 80px;
+    box-shadow: 0 2px 8px 0 rgb(16 7 104 / 7%);
+}
+
+.center .site-branding {
+    float: none;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+.center .main-navigation ul {
+    justify-content: center;
+}
+.center #site-navigation-wrapper {
+    float: none;
+    right: 0;
+}
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
 	display: block;
 	width: 100%;
+}
+.main-navigation a{
+    height: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    display:flex;
+    text-decoration: none;
+    padding: 0 1em;
+    transition: all .2s linear;
+
+}
+.main-navigation > .menu-item {
+    line-height: 80px;
+}
+.main-navigation>ul {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
 }
 
 .main-navigation ul {
@@ -657,6 +716,7 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+
 }
 
 .main-navigation ul ul {
@@ -667,6 +727,12 @@ textarea {
 	left: -999em;
 	z-index: 99999;
 }
+.main-navigation ul ul{
+    flex-direction: column;
+}
+.main-navigation li ul li{
+    line-height:35px;
+}
 
 .main-navigation ul ul ul {
 	left: -999em;
@@ -676,7 +742,7 @@ textarea {
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	display: block;
-	left: auto;
+	left: 200px;
 }
 
 .main-navigation ul ul a {
@@ -690,6 +756,7 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+    line-height: 80px;
 }
 
 .main-navigation a {
@@ -743,6 +810,28 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.content-area {
+    float: left;
+    position: relative;
+    width: 72%;
+    padding-right: 30px;
+    padding-top:30px;
+}
+.widget-area.secondary {
+    float: right;
+    padding-left: 30px;
+}
+.widget-area {
+    padding-top:30px;
+    width: 28%;
+
+}
+
 .sticky {
 	display: block;
 }
@@ -765,6 +854,19 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+.site-footer .bottom-footer .site-info{
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 959px){
+.content-area, .widget-area.secondary, .widget-area {
+    float: none !important;
+    width: 100%;
+    padding: 0 !important;
+    border: 0;
+}
 }
 
 /* Comments
@@ -873,7 +975,14 @@ textarea {
 .gallery-caption {
 	display: block;
 }
-
+.clear:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+    height: 0;
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -966,4 +1075,9 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+.wp-block-archives-list li, 
+.wp-block-categories-list{
+    list-style: none;
 }

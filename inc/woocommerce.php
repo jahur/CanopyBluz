@@ -117,9 +117,9 @@ if ( ! function_exists( 'xry_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function xry_woocommerce_wrapper_before() {
-		?>
-			<main id="primary" class="site-main">
-		<?php
+	
+			do_action('xry_main_content_wrapper_start');
+
 	}
 }
 add_action( 'woocommerce_before_main_content', 'xry_woocommerce_wrapper_before' );
@@ -133,9 +133,9 @@ if ( ! function_exists( 'xry_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function xry_woocommerce_wrapper_after() {
-		?>
-			</main><!-- #main -->
-		<?php
+		
+		do_action('xry_main_content_wrapper_end');
+
 	}
 }
 add_action( 'woocommerce_after_main_content', 'xry_woocommerce_wrapper_after' );

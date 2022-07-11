@@ -10,7 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<?php do_action('xry_main_content_wrapper_start'); ?>
+
+<div id="primary" class="content-area clear">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -45,9 +47,11 @@ get_header();
 
 		endif;
 		?>
+		</div>
+<?php get_sidebar(); ?>
 
-	</main><!-- #main -->
+<?php do_action('xry_main_content_wrapper_end'); ?>
 
 <?php
-get_sidebar();
+
 get_footer();

@@ -11,6 +11,34 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+
+if( ! function_exists('xry_main_content_wrapper_start_fn') ){
+
+	function xry_main_content_wrapper_start_fn(){
+
+		$html = '<main id="site-main" class="site-main clear">';
+		$html .= '<div class="site-content-wrapper container clear">';
+		echo $html;
+
+	}
+
+	add_action( 'xry_main_content_wrapper_start', 'xry_main_content_wrapper_start_fn');
+}
+
+
+
+if( ! function_exists('xry_main_content_wrapper_end_fn') ){
+
+	function xry_main_content_wrapper_end_fn(){
+
+		$html  = '</div>';
+		$html .= '</main><!-- #main -->';
+		echo $html;
+	}
+
+	add_action('xry_main_content_wrapper_end', 'xry_main_content_wrapper_end_fn');
+
+}
 function xry_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
@@ -35,3 +63,4 @@ function xry_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'xry_pingback_header' );
+

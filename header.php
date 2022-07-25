@@ -47,8 +47,9 @@
 			</div><!-- .site-branding -->
 
 			<div id="site-navigation-wrapper" class="main-navigation-wrapper">
+				<div id="mobile-navigation"></div>
 
-				<nav id="site-navigation" class="main-navigation">
+				<nav id="site-navigation" class="main-navigation desktop-menu">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'xry' ); ?></button>
 					<?php
 					wp_nav_menu(

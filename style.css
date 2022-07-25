@@ -544,7 +544,7 @@ a {
 }
 
 a:visited {
-	color: #800080;
+    color: #4e4e4e;
 }
 
 a:hover,
@@ -732,8 +732,13 @@ textarea {
 .main-navigation ul ul{
     flex-direction: column;
 }
-.main-navigation li ul li{
-    line-height:35px;
+
+.main-navigation li ul li:first-child{
+	margin-top:15px;
+}
+.main-navigation li ul li {
+    line-height: 24px;
+    margin: 10px 0;
 }
 
 .main-navigation ul ul ul {
@@ -764,6 +769,24 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+.desktop-menu .sub-menu{
+	background: #ffffff;
+}
+
+.slicknav_menu, #mobile-navigation {
+	display:none;
+}
+
+@media screen and (max-width: 40em) {
+	/* #menu is the original menu */
+	.main-navigation {
+		display:none;
+	}
+	
+	.slicknav_menu, #mobile-navigation {
+		display:block;
+	}
 }
 
 /* Small menu. */
